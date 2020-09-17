@@ -12,7 +12,3 @@
         password: "Qw3rty02@home"
       delegate_to: localhost
       register: returnedData
-
-    - name: debug
-      debug:
-        msg: "{{ returnedData }}"
