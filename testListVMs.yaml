@@ -1,6 +1,9 @@
 ---
 
 - name: Gather facts from xenserver
+  hosts: all
+  gather_facts: True
+  
   tasks:
     - name: List VMs
       xenserver_facts:
