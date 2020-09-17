@@ -1,3 +1,5 @@
+---
+
 - name: Gather facts
   xenserver_guest_info:
     hostname: "vms1"
