@@ -1,10 +1,18 @@
 ---
 
 - name: Gather facts
-  xenserver_guest_info:
-    hostname: "vms1"
-    username: "root"
-    password: "Qw3rty02"
-    name: testvm_11
-  delegate_to: localhost
-  register: facts
+  hosts: all
+  gather_facts: True
+
+  tasks:
+    - name: List VMs
+      xenserver_guest_info:
+        hostname: "vms1"
+        username: "root"
+        password: "Qw3rty02"
+      delegate_to: localhost
+      register: returnedData
+
+    - name: debug
+      debug:
+        msg: "{{ returnedData }}"
