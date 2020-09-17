@@ -10,5 +10,6 @@
         hostname: "vms1"
         username: "root"
         password: "Qw3rty02@home"
+        uuid: "2d1ae686-4b4b-40c9-bf25-c8f819a27f44"
       delegate_to: localhost
       register: returnedData
